@@ -49,7 +49,6 @@ public class PanImageTwoController {
         System.out.println(str);
     }
 
-
     /*
         Initialize things in the controller for the GUI
      */
@@ -70,7 +69,7 @@ public class PanImageTwoController {
             get stage to use as parent for dialog
             and set a default path for the file chooser
          */
-        //File defFile = new File("D:\\MMO_Pictures\\AlienBlackout\\2025_03");
+
         String sDirExamples = System.getProperty("user.dir") + "\\testImages";
 
         File defFile = new File(sDirExamples);
@@ -246,12 +245,14 @@ public class PanImageTwoController {
                 spScrollPane.setHvalue(x);
                 spScrollPane.setVvalue(y);
             }
+
             /*
                 Report the zoom factor just for grins
              */
             printSysOut(String.format("Zoom factor %.3f", newV.doubleValue() ));
             setStatus( String.format("Zoom %.3f", dZoomScale) );
             lblSliderValue.setText( String.format("%.3f", dZoomScale));
+
         });
 
 
@@ -352,6 +353,7 @@ public class PanImageTwoController {
                                 spScrollPane.setVvalue(y);
                             }
                         }
+
                     }
                 }
         );
